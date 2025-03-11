@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>International Sports Leadership Academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {width: 300px;height: 200px;perspective: 1000px; /* Remove this if you don't want the 3D effect */}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg);}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {color: black;}
+
+/* Style the back side */
+.flip-card-back {transform: rotateY(180deg);}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Whatsapp Button */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:10px;
+    margin-left: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/ISLA.html/#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/ISLA.html#isla" class="w3-bar-item w3-button w3-padding-large">ISLA</a>
+    <a href="/ISLA.html#redeem" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHY US?</a>
+    <!-- <a href="#programmes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAMMES</a> -->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PROGRAMMES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="/ISLA.html#ACADEMICPROGRAMS" class="w3-bar-item w3-button">ACADEMIC PROGRAMMES</a>
+        <a href="/ISLA.html#SpecializedSports" class="w3-bar-item w3-button">SPECIALIZED SPORTS PROGRAMS</a>
+        <a href="/ISLA.html#OTHERSPECIALIZEDPROGRAMS" class="w3-bar-item w3-button">OTHER SPECIALIZED PROGRAMS</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <a href="/ISLA.html#premises" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PREMISES</a>
+    <a href="/ISLA.html#schedule" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE</a>
+    <a href="/ISLA.html#video" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a> -->
+      <!--Faq menu start-->
+    <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">FAQ <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">ACADEMIC PROGRAMMES</a>
+          <a href="/FAQ-Sports.htm" class="w3-bar-item w3-button">SPECIALIZED SPORTS PROGRAMS</a>        
+        </div>
+      </div>
+      <!--Faq menu end-->
+    <a href="/ISLA.html#aboutus" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <a href="/ISLA.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+    <!-- <a href="/ISLA.html#pathway" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PATHWAYS</a> -->
+    
+    
+     
+    
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="/ISLA.html#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="/ISLA.html#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="/ISLA.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="/ISLA.html#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-white" id="FAQPageParentDIV">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h2 class="w3-wide w3-center">FAQ</h2>
+            <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">        
+                <div class="w3-margin-bottom w3-center">
+                    <!-- <div class=" w3-margin-top w3-center ">        
+                        <button onclick="myFunction('faq1')" class="w3-btn w3-block w3-black w3-left-align w3-center">Does your school offer preparatory courses for IIT-JEE, NEET, and Olympiads?</button>
+                        <div id="faq1" class="w3-container w3-hide w3-light-grey w3-center">
+                        <div id="w3-row w3-center">Yes, our school Partnered with Reputed Institutions in India to provide specialized preparatory courses (online) for IIT-JEE, NEET, and various Olympiads. These courses are 
+                            designed to help students prepare effectively for these competitive exams while balancing their regular academic curriculum. 
+                        </div>
+                    </div>         -->
+
+                    <!--after this-->
+
+                    <div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq1')" class="w3-btn w3-block w3-black w3-left-align w3-left">1. Does your school offer preparatory courses for IIT-JEE, NEET, and Olympiads?</button>
+                        <div id="faq1" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - Yes, our school Partnered with Reputed Institutions in India to provide specialized 
+preparatory courses (online) for IIT-JEE, NEET, and various Olympiads. These courses are 
+designed to help students prepare effectively for these competitive exams while balancing 
+their regular academic curriculum.
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq2')" class="w3-btn w3-block w3-black w3-left-align w3-left">2. Are the preparatory courses part of the regular school curriculum?</button>
+                        <div id="faq2" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - The preparatory courses are offered as an additional option to the regular curriculum. Students can choose to enroll in these courses based on their interests and goals. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq3')" class="w3-btn w3-block w3-black w3-left-align w3-left">3. How does the collaboration between ISLA and the coaching Institutions work?</button>
+                        <div id="faq3" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - The school has partnered with a renowned coaching center in India (online) to provide additional preparatory courses for IIT-JEE, NEET, and Olympiads. The coaching center’s experienced faculty conducts specialized classes, while the school ensures that students can balance these courses with their regular curriculum. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq4')" class="w3-btn w3-block w3-black w3-left-align w3-left">4. Are these preparatory courses mandatory for students?</button>
+                        <div id="faq4" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - No, these courses are optional. Students who wish to take advantage of specialized coaching for IIT-JEE, NEET, and Olympiads can enroll in these preparatory courses, but participation is not mandatory. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq5')" class="w3-btn w3-block w3-black w3-left-align w3-left">5. How do the preparatory courses integrate with the school’s regular academic schedule?</button>
+                        <div id="faq5" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - The courses are designed to complement the school’s regular academic schedule. Classes are held during the time slot allocated for specialized programs, ensuring that students can manage both their schoolwork and preparatory courses effectively. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq6')" class="w3-btn w3-block w3-black w3-left-align w3-left">6. Can students manage these preparatory courses along with their regular academics?</button>
+                        <div id="faq6" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - Absolutely! We ensure that students can manage both their regular academics and preparatory courses through a well-organized schedule. Our teachers and academic counselors help students prioritize tasks and manage time effectively. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq7')" class="w3-btn w3-block w3-black w3-left-align w3-left">7. Are the preparatory courses taught by the same faculty as the school teachers?</button>
+                        <div id="faq7" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - No, the preparatory courses are taught by specialized faculty from the reputed coaching center(online). These instructors are experienced in preparing students for competitive exams like IIT-JEE, NEET, and Olympiads, bringing in-depth knowledge and proven teaching methodologies. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq8')" class="w3-btn w3-block w3-black w3-left-align w3-left">8. How do students get personalized support in these preparatory courses?</button>
+                        <div id="faq8" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - Partner Institutions offer personalized support through one-on-one doubt-solving sessions, small group discussions, and mentoring programs. Each student’s progress is tracked, and guidance is provided based on their individual needs. The school’s academic counselors also work with students to track their progress and ensure that they don’t fall behind in regular academics while attending the preparatory courses. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq9')" class="w3-btn w3-block w3-black w3-left-align w3-left">9. Are there any additional fees for enrolling in these preparatory courses?</button>
+                        <div id="faq9" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - No, there are no additional fees for the preparatory courses. The fees vary based on the course selected, but ISLA will take care of it. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq10')" class="w3-btn w3-block w3-black w3-left-align w3-left">10. How do the preparatory courses integrate with the school’s teaching methodology?</button>
+                        <div id="faq10" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - Our preparatory courses are seamlessly integrated with the regular curriculum, ensuring that students learn at their own pace and focus on key concepts relevant to their exams. We provide a balanced approach to ensure students don’t feel overwhelmed. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq11')" class="w3-btn w3-block w3-black w3-left-align w3-left">11. Can students enroll in these preparatory courses in any grade?</button>
+                        <div id="faq11" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - While students can begin preparatory courses as early as Grade 8, we recommend enrolling in these courses in Grade 9 for IIT-JEE and NEET, and for Olympiads, students can start as early as Grade 7.
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq12')" class="w3-btn w3-block w3-black w3-left-align w3-left"> 12. What resources are available for students preparing for these competitive exams?</button>
+                        <div id="faq12" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - We provide access to study materials, previous years’ question papers, online test series, and exclusive workshops. Additionally, our library is stocked with relevant books, and students can access digital resources for better preparation. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq13')" class="w3-btn w3-block w3-black w3-left-align w3-left">13. Will students have access to study materials and resources from the coaching center?</button>
+                        <div id="faq13" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - Yes, students enrolled in these preparatory courses will receive comprehensive study materials, reference books, and online resources from the coaching center, tailored to the specific requirements of IIT-JEE, NEET, or the Olympiads.
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq14')" class="w3-btn w3-block w3-black w3-left-align w3-left"> 14. How do students balance their schoolwork with these additional courses?</button>
+                        <div id="faq14" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - The coaching center and the school work together to create a manageable timetable for students. This ensures that students have ample time for their school assignments and extracurricular activities while attending the preparatory courses. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq15')" class="w3-btn w3-block w3-black w3-left-align w3-left">15. Can students receive counseling or career guidance related to these exams?</button>
+                        <div id="faq15" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - We offer career counseling services that help students make informed decisions about their future. Our counselors guide students on choosing the right preparation strategies, career paths, and college options based on their interests and exam performance. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq16')" class="w3-btn w3-block w3-black w3-left-align w3-left">16. How do students stay motivated during intensive exam preparation?</button>
+                        <div id="faq16" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - We maintain a supportive and encouraging environment where students can stay motivated. Regular interactions with mentors, peer support, motivational talks, and stress-relieving activities help students remain focused and balanced. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq17')" class="w3-btn w3-block w3-black w3-left-align w3-left">17. How do the preparatory courses help students with time management and exam strategies?</button>
+                        <div id="faq17" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - The coaching center focuses on building strong time-management skills and exam strategies through regular practice, time-bound exercises, and strategic revision. This prepares students not only with subject knowledge but also with the skills needed to perform well under exam conditions. 
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq18')" class="w3-btn w3-block w3-black w3-left-align w3-left">18. How does the coaching center track and report student progress?</button>
+                        <div id="faq18" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - The coaching center conducts regular assessments and tracks student progress. Reports are shared with both students and parents, outlining strengths, areas for improvement, and recommended study plans.
+                        </div>
+                    </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                        <button onclick="myFunction('faq19')" class="w3-btn w3-block w3-black w3-left-align w3-left"> 19. What makes this collaboration with the coaching center unique?</button>
+                        <div id="faq19" class="w3-container w3-hide w3-light-grey w3-left">
+                        <div id="w3-row w3-center"> - The collaboration combines the school’s holistic education approach with the coaching center’s specialized expertise in competitive exams. This provides students with a well-rounded academic foundation while preparing them rigorously for IIT-JEE, NEET, and Olympiad exams.
+                        </div>
+                    </div> </div>
+
+
+
+
+
+<!--Before this-->
+                </div>
+              
+
+
+ 
+
+                </div>
+            <div class="w3-third">                
+        </div>       
+    </div> 
+</div>
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      x.previousElementSibling.className = 
+      x.previousElementSibling.className.replace("w3-black", "w3-red");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className = 
+      x.previousElementSibling.className.replace("w3-red", "w3-black");
+    }
+  }
+</script>
