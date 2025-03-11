@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>International Sports Leadership Academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {width: 300px;height: 200px;perspective: 1000px; /* Remove this if you don't want the 3D effect */}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg);}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {color: black;}
+
+/* Style the back side */
+.flip-card-back {transform: rotateY(180deg);}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Whatsapp Button */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:10px;
+    margin-left: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/ISLA.html#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/ISLA.html#isla" class="w3-bar-item w3-button w3-padding-large">ISLA</a>
+    <a href="/ISLA.html#redeem" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHY US?</a>
+    <!-- <a href="#programmes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAMMES</a> -->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PROGRAMMES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="/ISLA.html#ACADEMICPROGRAMS" class="w3-bar-item w3-button">ACADEMIC PROGRAMMES</a>
+        <a href="/ISLA.html#SpecializedSports" class="w3-bar-item w3-button">SPECIALIZED SPORTS PROGRAMS</a>
+        <a href="/ISLA.html#OTHERSPECIALIZEDPROGRAMS" class="w3-bar-item w3-button">OTHER SPECIALIZED PROGRAMS</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <a href="/ISLA.html#premises" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PREMISES</a>
+    <a href="/ISLA.html#schedule" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE</a>
+    <a href="/ISLA.html#video" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a> -->
+      <!--Faq menu start-->
+    <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">FAQs <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="/FAQ-Specialized.htm" class="w3-bar-item w3-button">ACADEMIC PROGRAMMES</a>
+          <a href="#" class="w3-bar-item w3-button">SPECIALIZED SPORTS PROGRAMS</a>        
+        </div>
+      </div>
+      <!--Faq menu end-->
+    <a href="/ISLA.html#aboutus" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <a href="/ISLA.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+    <!-- <a href="/ISLA.html#pathway" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PATHWAYS</a> -->
+    
+    
+     
+    
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="/ISLA.html#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="/ISLA.html#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="/ISLA.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="/ISLA.html#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-white" id="FAQPageParentDIV">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h2 class="w3-wide w3-center">SPECIALIZE SPORTS PROGRAMMES FAQ</h2>
+            <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">        
+                <div class="w3-margin-bottom w3-center">
+                    <!-- <div class=" w3-margin-top w3-center ">        
+                        <button onclick="myFunction('faq1')" class="w3-btn w3-block w3-black w3-left-align w3-center">Does your school offer preparatory courses for IIT-JEE, NEET, and Olympiads?</button>
+                        <div id="faq1" class="w3-container w3-hide w3-light-grey w3-center">
+                        <div id="w3-row w3-center">Yes, our school Partnered with Reputed Institutions in India to provide specialized preparatory courses (online) for IIT-JEE, NEET, and various Olympiads. These courses are 
+                            designed to help students prepare effectively for these competitive exams while balancing their regular academic curriculum. 
+                        </div>
+                    </div>         -->
+
+                    <!--after this-->
+                    <div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq1')" class="w3-btn w3-block w3-black w3-left-align w3-left">1. How does your school balance academics and sports?</button>
+                      <div id="faq1" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Our school emphasizes a holistic approach, integrating academic excellence with athletic development. We have a flexible schedule that allows students to excel in both fields, with dedicated time for sports practices and academic study.
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq2')" class="w3-btn w3-block w3-black w3-left-align w3-left">2. Are students required to participate in sports?</button>
+                      <div id="faq2" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - While participation in sports is encouraged to foster teamwork, discipline, and fitness, students can choose from a range of athletic activities based on their interests and abilities. However, physical education is mandatory. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq3')" class="w3-btn w3-block w3-black w3-left-align w3-left">3. How do you ensure academic performance doesn't suffer due to sports commitments?</button>
+                      <div id="faq3" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - We have a team of academic support staff, including tutors, who help students manage their workloads. Our school also provides dedicated study periods and flexible scheduling for students involved in sports competitions or practices. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq4')" class="w3-btn w3-block w3-black w3-left-align w3-left">4. What sports programs are offered at the school?</button>
+                      <div id="faq4" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - We offer a wide range of sports, including team sports (basketball, football, soccer, etc.), individual sports (tennis, athletics, swimming, etc.), and recreational activities to suit all interests and skill levels. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq5')" class="w3-btn w3-block w3-black w3-left-align w3-left">5. How do sports competitions affect academic schedules?</button>
+                      <div id="faq5" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - We prioritize academic performance while also recognizing the importance of sports. If a student is involved in a competition, our faculty works with them to ensure they can catch up on missed lessons without affecting their grades. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq6')" class="w3-btn w3-block w3-black w3-left-align w3-left">6. Do students have access to professional sports training?</button>
+                      <div id="faq6" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Yes, we have qualified coaches and trainers who work closely with students to develop their skills. We also provide opportunities for students to attend training camps and workshops with professionals in various sports fields. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq7')" class="w3-btn w3-block w3-black w3-left-align w3-left">7. Can students participate in sports outside of school competitions?</button>
+                      <div id="faq7" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Absolutely! We encourage students to pursue sports both inside and outside of school. We support their participation in regional, national, or even international sports events. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq8')" class="w3-btn w3-block w3-black w3-left-align w3-left">8. How do you promote the importance of teamwork in both academics and sports?</button>
+                      <div id="faq8" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Teamwork is a core value in both our sports programs and classroom activities. We encourage collaborative projects in academics and emphasize the importance of supporting one another in sports. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq9')" class="w3-btn w3-block w3-black w3-left-align w3-left">9. What happens if a student struggles to balance both sports and academics?</button>
+                      <div id="faq9" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Our school provides a supportive environment where students can seek help from counselors, academic tutors, and coaches to find a balance. We also offer time management workshops to help students handle both responsibilities effectively. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq10')" class="w3-btn w3-block w3-black w3-left-align w3-left">10. Does the school offer scholarships for sports performance?</button>
+                      <div id="faq10" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Yes, we offer merit-based scholarships for students who excel in sports. These scholarships are available for both elite athletes and those showing great potential in their chosen sports. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq11')" class="w3-btn w3-block w3-black w3-left-align w3-left">11. How does the school ensure the well-being of students involved in both academics and sports?</button>
+                      <div id="faq11" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - We have a wellness program in place that includes regular physical and mental health check-ups,stress management workshops, and balanced meal plans to support the well-being of students juggling both academics and sports. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq12')" class="w3-btn w3-block w3-black w3-left-align w3-left">12. Can students compete in national or international sports events while maintaining their academics?</button>
+                      <div id="faq12" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Yes, students are encouraged to compete at higher levels, and our flexible academic schedule is designed to accommodate such commitments. We work closely with students to ensure they don’t fall behind in their studies. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq13')" class="w3-btn w3-block w3-black w3-left-align w3-left">13. How do sports and academics contribute to a student's overall development?</button>
+                      <div id="faq13" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Our dual focus on academics and sports ensures that students grow intellectually, physically, and socially. They develop discipline, time management, leadership skills, and resilience, which contribute to success in all aspects of life. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq14')" class="w3-btn w3-block w3-black w3-left-align w3-left">14. Are there any academic prerequisites to join the school’s sports teams?</button>
+                      <div id="faq14" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - While there are no strict academic prerequisites to join most sports teams, we do encourage students to maintain good academic standing. Athletes must demonstrate a commitment to both their academics and sports. 
+                      </div>
+                  </div> </div>
+<div class=" w3-margin-top w3-left  w3-block">        
+                      <button onclick="myFunction('faq15')" class="w3-btn w3-block w3-black w3-left-align w3-left">15. How do teachers and coaches collaborate to ensure students thrive in both areas?</button>
+                      <div id="faq15" class="w3-container w3-hide w3-light-grey w3-left">
+                      <div id="w3-row w3-center"> - Teachers and coaches communicate regularly to track students’ progress and well-being. We ensure that students have the resources they need to succeed in both academics and sports, and they are supported through consistent guidance from both faculty and coaching staff.
+                      </div>
+                  </div> </div>
+
+
+
+
+
+<!--Before this-->
+                </div>
+              
+
+
+ 
+
+                </div>
+            <div class="w3-third">                
+        </div>       
+    </div> 
+</div>
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      x.previousElementSibling.className = 
+      x.previousElementSibling.className.replace("w3-black", "w3-red");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className = 
+      x.previousElementSibling.className.replace("w3-red", "w3-black");
+    }
+  }
+</script>
