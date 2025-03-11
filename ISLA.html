@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>International Sports Leadership Academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {width: 300px;height: 200px;perspective: 1000px; /* Remove this if you don't want the 3D effect */}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg);}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {color: black;}
+
+/* Style the back side */
+.flip-card-back {transform: rotateY(180deg);}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Whatsapp Button */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:10px;
+    margin-left: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#isla" class="w3-bar-item w3-button w3-padding-large">ISLA</a>
+    <a href="#redeem" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHY US?</a>
+    <!-- <a href="#programmes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAMMES</a> -->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PROGRAMMES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#ACADEMICPROGRAMS" class="w3-bar-item w3-button">ACADEMIC PROGRAMMES</a>
+        <a href="#SpecializedSports" class="w3-bar-item w3-button">SPECIALIZED SPORTS PROGRAMS</a>
+        <a href="#OTHERSPECIALIZEDPROGRAMS" class="w3-bar-item w3-button">OTHER SPECIALIZED PROGRAMS</a>
+      </div>
+    </div>
+    <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+    <a href="#premises" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PREMISES</a>
+    <a href="#schedule" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE</a>
+    <a href="#video" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO</a>
+    <!-- <a href="#FAQ" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a> -->
+
+    <!--Faq menu start-->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">FAQ <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="/FAQ-Specialized.htm" class="w3-bar-item w3-button">ACADEMIC PROGRAMMES</a>
+        <a href="/FAQ-Sports.htm" class="w3-bar-item w3-button">SPECIALIZED SPORTS PROGRAMS</a>        
+      </div>
+    </div>
+    <!--Faq menu end-->
+    <a href="#aboutus" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+    <!-- <a href="#pathway" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PATHWAYS</a> -->
+    
+    
+     
+    
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width: 2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/badminton.jpg" style="width:100%">    
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/children.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3></h3>
+      <p><b></b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/class_1200x600.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3></h3>
+      <p><b></b></p>    
+    </div>
+  </div>
+
+  <!-- The isla Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="isla">
+        <h2 class="w3-wide">WHERE SPORTS MEET SCHOLARS</h2>
+        <p class="w3-opacity"><i></i></p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-half">
+                <img src="/images/isla_logo.png" class="w3-round w3-margin-bottom" alt="INTERNATIONAL SPORTS AND LEADERSHIP ACADEMY" style="width:60%">
+            </div>
+            <div class="w3-half">
+                    <p class="w3-justify">ISLA will create a platform for “Students of All Nationals in Japan” to strike a balance between academic finesse and sporting
+                    excellence. ISLA will rise to the challenge to develop student-athletes to live as Champions in the modern era instilled with the core values of:
+                    Excellence, Respect, Honor, Integrity, Resilience, Respect, Responsibility.</p>
+            </div>
+        </div>
+  </div>
+
+  <!-- The Reedeeming feature Section -->
+   <div id="redeem" class="w3-blue-grey w3-center">
+    
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+            <h2 class="w3-wide">Our Redeeming Features</h2>
+            <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+              <div class="w3-third w3-margin-bottom">
+                <div class="w3-container flip-card">
+                    <div class="w3-padding-32 flip-card-inner">
+                    <div class="w3-third flip-card-front">                       
+                            <img src="/images/aspiration.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- <h4><b>Attain Education Aspirations</b></h4> -->
+                            <ul class="w3-ul">
+                                <li>Athelete friendly Programs</li>
+                                <li>Support in Academic Wellbeing</li>                                    
+                            </ul>                                
+                        </div>         
+                    </div> 
+                    <h4><b>  Attain Educational Aspirations</b></h4>    
+                </div>  
+                          
+              </div>   
+              
+              <div class="w3-third w3-margin-bottom">
+                <div class="w3-container flip-card">
+                        <div class="w3-padding-32 flip-card-inner">
+                            <div class="w3-third flip-card-front">                       
+                                    <img src="/images/boost.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+                            </div>
+                            <div class="flip-card-back">
+                                    <!-- <h4><b>Boost Sports Potential</b></h4> -->
+                                    <ul class="w3-ul">
+                                        <li>Develop Athleticisim </li>
+                                        <li>Assist performance</li>
+                                        <li>Elite Sports Biosphere</li>
+                                    </ul>                                    
+                            </div>         
+                        </div> 
+                      <h4><b>Boost Sports Potential</b></h4>
+                    </div>
+              </div>    
+              
+              <div class="w3-third w3-margin-bottom">
+                    <div class="w3-container flip-card">
+                        <div class="w3-padding-32 flip-card-inner">
+                              <div class="w3-third flip-card-front">                       
+                                <img src="/images/holistic.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- <h4><b>Holistic Development</b></h4> -->
+                                <ul class="w3-ul">
+                                    <li>Resilient and Future Ready </li>
+                                    <li>Integrity</li>
+                                    <li>Strong moral priciples</li>
+                                    <li>Leadership</li>
+                                </ul>                                
+                            </div>   
+
+                        </div> 
+                        <h4><b>Holistic Development</b></h4>       
+                    </div>                           
+                    
+              </div> 
+            </div> 
+        </div>  
+    </div>      
+   
+
+
+
+
+<!-- Cambridge Pathway-->
+  <div class="w3-white" id="ACADEMICPROGRAMS">
+     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">ACADEMIC PROGRAMS</h2>
+      <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">  
+           <div class="w3-half w3-container">
+           <table class="w3-table w3-border w3-left-align"style="width:100%">
+              <tr style="width:100%" class="w3-purple"><td class="w3-table-cell w3-purple">Early Years (Age : 3+)</td></tr>
+              <tr class="w3-table-row w3-left"><td class="w3-table-cell w3-left-align">
+                <ul class="w3-ul w3-align-left">                
+                  <li>A play based program with holistic curriculum</li>
+                  <li>Engaging Resources</li>
+                  <li>Support to measure progress</li> 
+                  <li>6 curriculum areas including personal social and emotional development.</li>
+                  <li> <p></p></li>
+                </ul></td>
+              </tr>
+           </table>
+          </div>
+          <div class="w3-half w3-container">
+            <table class="w3-table w3-border w3-left-align"style="width:100%">
+               <tr style="width:100%" class="w3-light-blue"><td class="w3-table-cell w3-light-blue">Primary (Age 5+)</td></tr>
+               <tr class="w3-table-row w3-left"><td class="w3-table-cell w3-left-align">
+                 <ul class="w3-ul w3-align-left">                
+                  <li>Clear, Adaptable curriculum</li>
+                            <li>Flexible assessment options</li>
+                            <li>Support and resources</li>
+                            <li>Insight to understand potential</li> 
+                            <li>11 Subjects include English, Mathematics, Science, Computing, Art & Design and wellbeing</li>
+                 </ul></td>
+               </tr>
+            </table>
+           </div>
+      </div>
+      <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">
+        <div class="w3-half w3-container">
+          <table class="w3-table w3-border w3-left-align"style="width:100%">
+             <tr style="width:100%" class="w3-green"><td class="w3-table-cell w3-green">Lower Secondary (Age 11+)</td></tr>
+             <tr class="w3-table-row w3-left"><td class="w3-table-cell w3-left-align">
+               <ul class="w3-ul w3-align-left">                
+                <li>Clear, Adaptable curriculum</li>
+                <li>Flexible assessment options</li>
+                <li>Support and resources</li>
+                <li>Insight to predict performance</li> 
+                <li>11 Subjects include English, Mathematics, Science, Computing, Art & Design and wellbeing</li>
+               </ul></td>
+             </tr>
+          </table>
+         </div>
+         <div class="w3-half w3-container">
+           <table class="w3-table w3-border w3-left-align"style="width:100%">
+              <tr style="width:100%" class="w3-black"><td class="w3-table-cell w3-black">Primary (Age 14+)</td></tr>
+              <tr class="w3-table-row w3-left">
+                <td class="w3-table-cell w3-left-align">
+                  <ul class="w3-ul w3-align-left">                
+                    <li>Broad, Adaptable curriculum</li>
+                    <li>Fair, valid, reliable assessment</li>
+                    <li>Support and resources</li>
+                    <li>Insight to optimise achievement</li> 
+                    <li>Cambridge IGCSE: 70+ subjects</li>
+                    <li>Cambridge O level: 40+ subjects</li>
+                    <li>Cambridge ICE:</li>
+                  </ul>
+                </td>
+              </tr>
+           </table>
+          </div>
+      </div>
+    </div>
+  </div>
+
+          
+  
+
+
+
+
+<!-- Specialized Sports Programs-->
+<div class="w3-blue-grey" id="SpecializedSports">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+   <h2 class="w3-wide w3-center">SPECIALIZED SPORTS PROGRAMS</h2>
+   <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">  
+        <div class="w3-half w3-container w3-center">   
+          <img src="/images/badminton-resize502x334.jpg" alt="" style="width:100%" class="w3-hover-opacity"> 
+          <p><b>BADMINTON</b></p>         
+        </div>
+        <div class="w3-half w3-container w3-center">         
+          <img src="/images/swimming502x334.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+          <p><b>SWIMMING</b></p> 
+        </div>  
+    </div>
+    <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">
+        <div class="w3-half w3-container w3-center" >      
+          <img src="/images/football502x334.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+          <p><b>SOCCER</b></p> 
+        </div>
+        <!--carousel-->
+        <div class="w3-content w3-display-container w3-half w3-center">
+          
+          <img class="manSlides" src="images/trackandfield502x334.jpg" style="width:100%">
+          <img class="manSlides" src="images/tennis502x334.jpg" style="width:100%">                    
+          <img class="manSlides" src="images/gymnastics502x334.jpg" style="width:100%"> 
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          <p><b>OTHER SPECIAL PROGRAMMES</b></p> 
+        </div>
+    </div>
+ </div>
+</div>
+
+
+
+  <!-- OTher Specialized Programmes -->
+
+   <div class="w3-white" id="OTHERSPECIALIZEDPROGRAMS">
+     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">OTHER SPECIALIZED PROGRAMMES</h2>
+      
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">        
+        <div class="w3-third w3-margin-bottom w3-center">
+          <img src="/images/iit-neet-502x334.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            
+            <p class="w3-opacity"><b>IIT JEE /NEET PREPARATORY CLUB</b></p>            
+            <!-- <button class="w3-button w3-black w3-margin-bottom" >Academic</button> -->
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom w3-center">
+          <img src="/images/chess-502x334.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b> </b></p>
+            <p class="w3-opacity"><b>MATHEMATICAL CHESS CLUB</b><br>                   </p>           
+            <!-- <button class="w3-button w3-black w3-margin-bottom" >Academic</button> -->
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom w3-center">
+          <img src="/images/coding-502x334.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p class="w3-opacity"><b>ISLA CODING CLUB</b>                 </p>           
+            <!-- <button class="w3-button w3-black w3-margin-bottom" >Sports Campus</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- The School Premises Section -->
+  <div class="w3-sand" id="premises">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+     <h2 class="w3-wide w3-center">PREMISES</h2>
+     <p class="w3-opacity w3-center"><i>Classrooms, library, Sports Gym, Medical Room and Laboratory</i></p><br>
+
+     <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">        
+       <div class="w3-half w3-margin-bottom">
+         <img src="/images/Moriya.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+         <div class="w3-container w3-white">
+           
+           <p class="w3-opacity">Early Years, Primary, Lower Secondary</p>
+           <p class="w3-opacity"></p>
+           <p> <a href="https://maps.app.goo.gl/oPSMP5tSVS2uhBMg8?g_st=ic"><i class="fa fa-map-marker" style="width:30px"></i>〒302-0119 Ibaraki, Moriya, Goshogaoka, 2-chōme−１１−17</a></p>
+           <p> </p>
+           <!-- <button class="w3-button w3-black w3-margin-bottom" >Academic</button> -->
+         </div>
+       </div>
+       <!-- <div class="w3-third w3-margin-bottom">
+         <img src="/images/Tsukuba.png" alt="" style="width:100%" class="w3-hover-opacity">
+         <div class="w3-container w3-white">
+           <p><b> </b></p>
+           <p class="w3-opacity">Upper Secondary <br>                   </p>
+           <p class="w3-opacity">                    </p>
+           <p> <a href="https://maps.app.goo.gl/tjxevosTiNiwudZ67?g_st=ic"><i class="fa fa-map-marker" style="width:30px"></i> 〒305-8577  Tennodai 1 Chome-1-1 Tsukuba, Ibaraki </p></a>
+           <p> </p>
+           <button class="w3-button w3-black w3-margin-bottom" >Academic</button>
+         </div>
+       </div> -->
+       <div class="w3-half w3-margin-bottom">
+         <img src="/images/Tennodai.png" alt="" style="width:100%" class="w3-hover-opacity">
+         <div class="w3-container w3-white">
+           <p class="w3-opacity">Everyone                    </p>
+           <p class="w3-opacity"></p>       
+           <p></p>
+           <p> <a href="https://maps.app.goo.gl/qLwHVagK4qsYWE8B6?g_st=ic"><i class="fa fa-map-marker" style="width:30px"></i>〒302-0117 4700 Nogisaki, Moriya, Ibaraki</p> </a>
+           <!-- <button class="w3-button w3-black w3-margin-bottom" >Sports Campus</button> -->
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<!--Time table-->
+<div id="schedule" class="w3-blue-grey w3-center">
+  <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px" id="schedule">
+      <h2 class="w3-wide w3-center">OUR SCHEDULE!</h2>
+      <image src="/images/timetable-page9.jpg" alt="SCHEDULE" style="width:100%">
+      
+  </div>
+</div>
+
+ <!--The video section-->
+ <div id="video" class="w3-center">
+  <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px" id="video">
+      <h2 class="w3-wide w3-center">View our campus !</h2>
+      <video width="320" height="240" controls>
+          <source src="/images/ISLA.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+  </div>
+</div>
+
+<!--About Us-->
+<div class="w3-blue-grey" id="aboutus">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+   <h2 class="w3-wide w3-center">About Us</h2>
+   </div>
+</div>
+<!-- Google form -->
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTaCBzsaeu6vVHcn9fDbU4jDADVudjOFHLD85caI6-fDBP6g/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+
+<!-- Image of location/map --><
+<a href="https://wa.me/91123467890" class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+</a>
+
+<!--footer-->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-black", "w3-red");
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-red", "w3-black");
+  }
+}
+
+var slideIndex = 1;
+
+
+showDivs(slideIndex);
+
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("manSlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+var spslideIndex = 1;
+
+spshowDivs(spslideIndex);
+
+function spplusDivs(n) {
+  spshowDivs(spslideIndex += n);
+}
+
+function spshowDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("SPSlides");
+  if (n > x.length) {spslideIndex = 1}
+  if (n < 1) {spslideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[spslideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
